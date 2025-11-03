@@ -91,18 +91,22 @@
   #the-article
     display: flex
     flex-wrap: wrap
+    min-height: 100vh
     &__menu
       flex: 1 12em
+      background: $c-white
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05)
     &__content-outer
       flex: 5 30em
       position: relative
+      background: $c-white
       border-left: $border
       border-right: $border
-      transition: box-shadow .2s ease-out
+      transition: box-shadow .3s ease-out
       overflow-x: auto
       outline-offset: -3px
       &:hover
-        box-shadow: 0 0 50px -20px
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
     &__content-inner
       max-width: 50em
       padding: $p-lg
@@ -116,4 +120,6 @@
     &__infobox
       flex: 1 12em
       outline-offset: -3px
+      background: $c-white
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05)
 </style>

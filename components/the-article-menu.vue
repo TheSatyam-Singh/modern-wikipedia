@@ -24,36 +24,46 @@
   @import ~assets/sass/variables
 
   #the-logo
-    padding: $p-sm
+    padding: $p-md
     border-bottom: $border
     display: block
     text-align: center
+    transition: transform 0.2s ease
+    &:hover
+      transform: scale(1.02)
 
   img
     width: 100%
-    max-width: 200px
+    max-width: 180px
 
   .toc
     &__title, &__link
       padding: $p-md
-      background-color: $c-blue-light
+      background-color: $c-white
       border-bottom: $border
-      font-weight: bold
+      font-weight: 600
+      transition: all 0.2s ease
     &__title
       color: $c-grey
       text-align: center
+      font-size: 0.95em
+      letter-spacing: 0.5px
     &__link
       display: block
       color: $c-black
       font-size: .9em
       text-decoration: none
+      border-left: 3px solid transparent
       &:hover
-        background-color: $c-grey-lighter
+        background-color: $c-blue-light
+        border-left-color: $c-accent
+        padding-left: calc(3em + 3px)
       &--nested
-        font-weight: unset
+        font-weight: normal
         padding: $p-sm
         padding-left: 4em
         border-bottom-width: 0
+        font-size: .85em
         li:last-child &
           border-bottom-width: 1px
 </style>

@@ -6,13 +6,15 @@
   box-sizing: border-box
 
 ::selection
-  background-color: $c-grey
-  color: $c-black
+  background-color: $c-blue-light
+  color: $c-blue-green
 
 body
   font-size: 16px
-  line-height: 1.7
+  line-height: 1.8
   font-family: $f-sans-serif
+  background-color: $c-grey-lighter
+  color: $c-black
   @media screen and (max-width: 860px)
     font-size: 14px
 
@@ -41,13 +43,16 @@ h2
     left: 0
 
 a
-  color: $c-blue-green
+  color: $c-accent
   text-decoration: none
+  transition: color 0.2s ease
   &:hover
     text-decoration: underline
+    color: darken($c-accent, 10%)
 
 button
   cursor: pointer
+  transition: all 0.2s ease
 
 img
   max-width: 100%
@@ -62,6 +67,9 @@ table
   display: block
   overflow-x: auto
   border-collapse: collapse
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
 
 th, td
   border: $border
@@ -69,6 +77,8 @@ th, td
 
 th
   background-color: $c-blue-light
+  font-weight: 600
+  color: $c-accent
 
 //--- Wikipedia Classes ---//
 
@@ -108,7 +118,9 @@ th
   font-size: .85em
   line-height: 1.4
   margin-bottom: 1em
-  border-radius: 2em
+  border-radius: 20px
+  border-left: 3px solid $c-accent
+  padding-left: 1.5em
 
 // floated boxes in article
 .tleft, .floatleft
