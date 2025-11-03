@@ -29,7 +29,7 @@ Before you start, use the link above to view a live version of the app or follow
 
 ## Development Instructions
 ```bash
-git clone https://github.com/maddyalj/modern-wikipedia.git
+git clone https://github.com/TheSatyam-Singh/modern-wikipedia.git
 cd modern-wikipedia
 
 # install dependencies
@@ -38,9 +38,24 @@ npm install
 # launch dev server
 npm run dev
 
+# build for production
+npm run build
+
 # generate static version (in /dist)
 npm run generate
 ```
+
+## Vercel Deployment
+This project is configured for seamless deployment on Vercel:
+
+1. Push your code to a GitHub repository
+2. Import the repository in [Vercel](https://vercel.com)
+3. Vercel will automatically detect the Nuxt.js configuration
+4. Deploy with default settings - the `vercel.json` configuration is already set up
+
+Alternatively, deploy with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/TheSatyam-Singh/modern-wikipedia)
 
 ## Note
 The HTML markup of article content is fetched from the Wikipedia API, which comes with embedded class names and inline styles. Hence this app doesn't have total control on the styling practices used, which might not be the best sometimes. The app however does attempt to clean/hack some of the markup given by Wikipedia but doesn't tackle all of them, as the point of this app is to demonstrate the concept, not to cover every rare use case.
