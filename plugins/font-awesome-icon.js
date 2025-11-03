@@ -1,14 +1,13 @@
 import Vue from 'vue'
-import fontawesome from '@fortawesome/fontawesome'
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBars, faSearch, faEdit, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faFile } from '@fortawesome/free-regular-svg-icons'
 
-import faBars from '@fortawesome/fontawesome-free-solid/faBars'
-import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
-import faEdit from '@fortawesome/fontawesome-free-solid/faEdit'
-import faSun from '@fortawesome/fontawesome-free-solid/faSun'
-import faFile from '@fortawesome/fontawesome-free-regular/faFile'
+// This is important, we are going to let Nuxt worry about the CSS
+config.autoAddCss = false
 
-fontawesome.library.add(
+library.add(
   faBars,
   faSearch,
   faEdit,

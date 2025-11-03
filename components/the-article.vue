@@ -109,7 +109,7 @@
       margin: 0 auto
       @media screen and (max-width: 1220px)
         padding: $p-sm
-      /deep/ ul
+      ::v-deep ul
         list-style-type: disc
         padding-left: 2.5em
         margin: 1em 0
